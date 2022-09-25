@@ -7,7 +7,7 @@ const fsPromises=require('fs').promises;
 
 const server =http.createServer((req,res)=>{
     console.log(req.url,req.method);
-    
+
 })
 const PORT =process.env.PORT||3500;
 server.listen(PORT,()=>console.log(`Server is runing in ${PORT}`));
