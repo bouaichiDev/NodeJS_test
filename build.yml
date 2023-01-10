@@ -3,7 +3,7 @@ en: push
 jobs:
   build-node:
     runs-on: ubuntu-lastest
-    container: node:16
+    container: node:19.3.0
     steps:
       - uses: actions/checkout@v3
       run: |
