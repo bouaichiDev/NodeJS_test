@@ -1,16 +1,19 @@
 on:
-  push:
-    branches:
-      -main
+  workflow_call:
+    inputs:
+      username:
+        description: 'A username passed from the caller workflow'
+        default: 'john-doe'
+        required: false
+        type: string
 jobs:
-  build-node:
-    runs-on: ubuntu-lastest
-    container: node:19.3.0
+  print-username:
+    runs-on: ubuntu-latest
     steps:
-    name: Checkout repository (#1)
-    uses: actions/checkout@v3
-    run: |
-        node --version
-        npm --version
-        npm install
-        node sever.js
+      - name: Print the input name to STDOUT 
+      - uses: actions/checkout@v3
+      - run: |
+            node --version
+            npm --version
+            npm install
+            node sever.js
