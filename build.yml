@@ -6,11 +6,9 @@ on:
         default: 'john-doe'
         required: false
         type: string
-
 jobs:
   print-username:
     runs-on: ubuntu-latest
-
     steps:
       - name: Print the input name to STDOUT 
         uses: actions/checkout@v3
